@@ -24,9 +24,6 @@ foreach($_GET as $key=>$value){
     else if($key=="hauteur"){
         $hauteur=$value;
 }}
-// echo "/\<br/>";    
-// for($h=0;$h<$largeur;$h++){
-//     echo "/";
     $n=$largeur;
     $k = 2 * $n - 2;
     for ($i = -1; $i < $n; $i++) 
@@ -49,7 +46,7 @@ foreach($_GET as $key=>$value){
             }
         echo "|</br>";    
     }
-    
+    foreach
 
 
 
