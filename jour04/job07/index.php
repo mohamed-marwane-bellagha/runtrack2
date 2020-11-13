@@ -26,27 +26,38 @@ foreach($_GET as $key=>$value){
 }}
     $n=$largeur;
     $k = 2 * $n - 2;
-    for ($i = -1; $i < $n; $i++) 
-    {;
-        for ($j = 0; $j < $k; $j++) 
+    for ($i = 0; $i < $n; $i++)
+    {
+        for ($j = 0; $j < $k; $j++)
         echo "&nbsp";
         $k = $k - 1;
         echo "/";
         for ($j = 0; $j <= $i; $j++ )
-    {echo "_";}     
+    {echo "_";}
             echo "\</br>";}
-    for($h=0;$h<$hauteur;$h++){
+    for($h=0;$h<$hauteur-1;$h++){
         for($w=0;$w<=$k;$w++){
             echo "&nbsp";
         }
         echo "|";
         for($i=0;$i<$largeur;$i++){
-            echo "&nbsp";
+            echo "&nbsp ";
             // echo $i;
             }
         echo "|</br>";    
     }
-    foreach
+if($h=$hauteur){
+
+    for($w=0;$w<=$k;$w++){
+        echo "&nbsp";
+    }
+    echo "|";
+    for($i=0;$i<$largeur;$i++){
+        echo "_";
+        // echo $i;
+    }
+    echo "|</br>";
+}
 
 
 

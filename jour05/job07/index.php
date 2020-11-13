@@ -10,7 +10,6 @@
     <input type="submit">
 </form>
 <?php
-;
 
 foreach($_GET as $key=>$value){
     if($key=="str"){
@@ -41,8 +40,6 @@ function gras($str){
         }
     }
     }
-//gras("Céci est une Chaine de");
-
 function cesar($str, $decalage) {
     $upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     $lower="abcdefghijklmnopqrstuvwxyz";
@@ -60,21 +57,14 @@ function cesar($str, $decalage) {
                     break;
 
                 }
-                ;
+
             }
         }}
         for($i=0;isset($str[$i]);$i++){
             for($k=0;isset($lower[$k]);$k++){
             if($str[$i]==$lower[$k]){
-               // echo $str[$i]." ".$lower[$k];
-                $indice2=$k+$decalage;
-                /*echo "k".$k;
-                echo "<br/>";
-                echo "deca".$decalage;
-                echo "<br/>";
-                echo "ind".$indice2;
-                echo "<br/>";*/
-                if($indice2>25){
+              $indice2=$k+$decalage;
+               if($indice2>25){
                     $newindice2=$indice2%26;
                     $str[$i]=$lower[$newindice2];
                     break;
@@ -87,7 +77,31 @@ function cesar($str, $decalage) {
         }
     }
     echo $str;}
+function plateforme($str){
+    for($i=0;isset($str[$i]);$i++){
+        echo $str[$i];
+        if($str[$i]=="m" && $str[$i+1]=="e"&& $str[$i+2]==" "){
+            $fin=$str[$i+1];
+            $space=$str[$i+2];
+            echo "$fin"."_".$space;
+            $i=$i+2;
+        }
 
+    }
+
+
+}
+if(isset($fonction)){
+if($fonction=="Gras"){
+    echo gras($string);
+}elseif($fonction=="Cesar"){
+    echo cesar($string,2);
+
+
+}elseif($fonction=="plateforme"){
+    echo plateforme($string);
+}
+}
 
 ?>
 </html>

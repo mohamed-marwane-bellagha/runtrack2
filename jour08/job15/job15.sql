@@ -1,0 +1,1 @@
+SELECT salles.nom AS 'salles', etage.nom FROM etage JOIN salles ON etage.id=salles.id_etage
